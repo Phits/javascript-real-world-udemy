@@ -179,9 +179,11 @@ if (johnsScore > dannysScore && johnsScore > billsScore) {
 } else if (billsScore > dannysScore && billsScore > johnsScore) {
     console.log('Bill wins becasue his score of ' + billsScore + ' is higher than Danny\'s score of ' + dannysScore + ' John\s score of ' + johnsScore);
 }
-   else {
+   else if {
 	 console.log('Danny wins becasue his score of ' + dannysScore + ' is higher than John\'s score of ' + johnsScore+ ' and Bill\s score of ' + billsScore);
-} 
+} else {
+	console.log('It\'s a draw');
+}
 
 
 
