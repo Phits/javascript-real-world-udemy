@@ -160,32 +160,122 @@ console.log(fullAge);
 /////////////////////////////////////
 // Coding Challenge 1
 
-var johnsAge = 56;
-var dannysAge = 18;
-var billsAge = 49;
+// var johnsAge = 56;
+// var dannysAge = 18;
+// var billsAge = 49;
 
 
-var johnsHeight = 155;
-var dannysHeight = 168;
-var billsHeight = 173;
+// var johnsHeight = 155;
+// var dannysHeight = 168;
+// var billsHeight = 173;
 
-var johnsScore = johnsHeight + 5 * johnsAge;
-var dannysScore = dannysHeight + 5 * dannysAge;
-var billsScore = billsHeight + 5 * billsAge;
+// var johnsScore = johnsHeight + 5 * johnsAge;
+// var dannysScore = dannysHeight + 5 * dannysAge;
+// var billsScore = billsHeight + 5 * billsAge;
 
 
-if (johnsScore > dannysScore && johnsScore > billsScore) {
-   console.log('John wins becasue his score of ' + johnsScore + ' is higher than Danny\'s score of ' + dannysScore + ' and Bill\s score of ' + billsScore);
-} else if (billsScore > dannysScore && billsScore > johnsScore) {
-    console.log('Bill wins becasue his score of ' + billsScore + ' is higher than Danny\'s score of ' + dannysScore + ' John\s score of ' + johnsScore);
-} else if (dannysScore > billsScore && dannysScore > johnsScore) {
-	 console.log('Danny wins becasue his score of ' + dannysScore + ' is higher than John\'s score of ' + johnsScore+ ' and Bill\s score of ' + billsScore);
-} else {
-	console.log('It\'s a draw');
+// if (johnsScore > dannysScore && johnsScore > billsScore) {
+//    console.log('John wins becasue his score of ' + johnsScore + ' is higher than Danny\'s score of ' + dannysScore + ' and Bill\s score of ' + billsScore);
+// } else if (billsScore > dannysScore && billsScore > johnsScore) {
+//     console.log('Bill wins becasue his score of ' + billsScore + ' is higher than Danny\'s score of ' + dannysScore + ' John\s score of ' + johnsScore);
+// } else if (dannysScore > billsScore && dannysScore > johnsScore) {
+// 	 console.log('Danny wins becasue his score of ' + dannysScore + ' is higher than John\'s score of ' + johnsScore+ ' and Bill\s score of ' + billsScore);
+// } else {
+// 	console.log('It\'s a draw');
+// }
+
+
+
+
+
+
+
+/////////////////////////////////////
+// Lecture: Funcitons
+
+// function calculateAge(yearOfBirth) {
+//     var age = 2017 - yearOfBirth;
+//     return age;
+// }
+
+// var ageJohn = calculateAge(1990);
+// var ageMike = calculateAge(1969);
+// var ageMary = calculateAge(1948);
+// console.log(ageMike);
+
+// function yearUntilRetirement(name, year) {
+//     var age = calculateAge(year);
+//     var retirement = 65 - age;
+
+//     if (retirement >= 0) {
+//          console.log(name + ' retires in ' + retirement + ' years.');
+//     } else {
+//     	 console.log(name + ' has already retired.');
+//     }
+
+   
+// }
+
+// yearUntilRetirement('John', 1990);
+// yearUntilRetirement('Mike', 1990);
+// yearUntilRetirement('Mary', 1948);
+
+
+
+
+
+
+/////////////////////////////////////
+// Lecture: Statements and Expressions
+
+// Statements
+// function someFun(par) {
+   
+// }
+
+// if (x = 5) {
+	
+// }
+
+// Expression
+// var someFun = function(par) {
+	
+// }
+
+// 3 + 4;
+
+// var x = 3;
+
+
+
+
+
+
+
+
+/////////////////////////////////////
+// Lecture: Arrays
+
+var names = ['John', 'Jane', 'Mark'];
+var years = new Array(1990, 1969, 1948);
+
+console.log(names[1]);
+names[1] = "Ben";
+console.log(names);
+
+var john = ['John', 'Smith', 1990, 'teacher', false];
+
+john.push('blue');
+john.unshift('Mr');
+john.pop();
+john.shift('Mr');
+console.log(john);
+
+// alert(john.indexOf('Smith'));
+
+if (john.indexOf('designer') === -1) {
+	console.log('John is not a teacher');
 }
-
-
-
 
 
 
