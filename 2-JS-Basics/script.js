@@ -256,29 +256,184 @@ console.log(fullAge);
 /////////////////////////////////////
 // Lecture: Arrays
 
-var names = ['John', 'Jane', 'Mark'];
-var years = new Array(1990, 1969, 1948);
+// var names = ['John', 'Jane', 'Mark'];
+// var years = new Array(1990, 1969, 1948);
 
-console.log(names[1]);
-names[1] = "Ben";
-console.log(names);
+// console.log(names[1]);
+// names[1] = "Ben";
+// console.log(names);
 
-var john = ['John', 'Smith', 1990, 'teacher', false];
+// var john = ['John', 'Smith', 1990, 'teacher', false];
 
-john.push('blue');
-john.unshift('Mr');
-john.pop();
-john.shift('Mr');
-console.log(john);
+// john.push('blue');
+// john.unshift('Mr');
+// john.pop();
+// john.shift('Mr');
+// console.log(john);
 
 // alert(john.indexOf('Smith'));
 
-if (john.indexOf('designer') === -1) {
-	console.log('John is not a teacher');
+// if (john.indexOf('designer') === -1) {
+// 	console.log('John is not a teacher');
+// }
+
+
+
+
+
+
+
+
+/////////////////////////////////////
+// Lecture: Objects and Properies
+
+// var john = {
+//     name: 'John',
+//     lastName: 'Smith',
+//     yearOfBirth: '1990',
+//     job: 'teacher',
+//     isMarried: false
+// };
+
+// console.log(john.lastName);
+// console.log(john['lastName']);
+
+// var xyz = 'job';
+// console.log(john[xyz]);
+
+// john.lastName = 'Miller';
+// john['job'] = 'brogrammer';
+
+// console.log(john);
+
+// var jane = new Object;
+
+// jane.name = 'jane';
+// jane.lastName = 'Smith';
+// jane.yearOfBirth = '1969';
+// jane.job = 'Is retired.';
+// jane.isMarried = true;
+
+// console.log(jane);
+
+
+
+
+
+
+
+
+
+/////////////////////////////////////
+// Lecture: Objects and Methods
+
+// v1.0
+// var john = {
+//     name: 'John',
+//     lastName: 'Smith',
+//     yearOfBirth: '1990',
+//     job: 'teacher',
+//     isMarried: false,
+//     family: ['Jane', 'Mark', 'Bob'],
+//     calculateAge: function() {
+//     	return 2017 - this.yearOfBirth;
+//     }
+// };
+
+// console.log( john.calculateAge() );
+
+// var age = john.calculateAge();
+// john.age = age;
+
+// console.log(john);
+
+// v2.0
+// var john = {
+//     name: 'John',
+//     lastName: 'Smith',
+//     yearOfBirth: '1990',
+//     job: 'teacher',
+//     isMarried: false,
+//     family: ['Jane', 'Mark', 'Bob'],
+//     calculateAge: function() {
+//     	this.age = 2017 - this.yearOfBirth;
+//     }
+// };
+
+// john.calculateAge();
+
+// console.log(john);
+
+// var mike = {
+//     yearOfBirth: '1950',
+//     calculateAge: function() {
+//     	this.age = 2017 - this.yearOfBirth;
+//     }
+// };
+
+// mike.calculateAge();
+
+// console.log(mike);
+
+
+
+
+
+
+
+
+
+/////////////////////////////////////
+// Coding Challenge 2
+
+// var yearsBorn = [1965, 2008, 1992, 1945, 1909];
+// var ages = [];
+
+// for (var i = 0; i < yearsBorn.length; i++) {
+// 	 //console.log( yearsBorn[i]);	
+//      ages[i] = 2017 - yearsBorn[i];
+//      // console.log( ages[i] );
+// };
+
+// for (i = 0; i < ages.length; i++) {
+
+// 	if (ages[i] >= 18 ) {
+// 		console.log('Person ' + (i + 1) + ' is ' + ages[i] + ' years old and of full age.');
+// 	} else {
+// 		console.log('Person ' + (i + 1) + ' is ' + ages[i] + ' years old and NOT of full age.');
+// 	}
+
+// };
+
+function printFullAge(years) {
+
+	var ages = [];
+    var fullAges = [];
+
+	for (var i = 0; i < years.length; i++) {
+	     ages[i] = 2017 - years[i];
+	};
+
+	for (var i = 0; i < ages.length; i++) {
+
+		if (ages[i] >= 18 ) {
+			console.log('Person ' + (i + 1) + ' is ' + ages[i] + ' years old and of full age.');
+			 fullAges.push(true);
+		} else {
+			console.log('Person ' + (i + 1) + ' is ' + ages[i] + ' years old and NOT of full age.');
+			 fullAges.push(false);
+		}
+	}
+
+	console.log(' ');
+
+	return fullAges;
+
 }
 
-
-
+var yearsBorn = [1965, 2008, 1992, 1945, 1909];
+var full_1 = printFullAge(yearsBorn);
+var full_2 = printFullAge([2012, 1915, 1999]);
 
 
 
