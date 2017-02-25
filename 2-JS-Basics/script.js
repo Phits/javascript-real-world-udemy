@@ -405,35 +405,44 @@ console.log(fullAge);
 
 // };
 
-function printFullAge(years) {
+// function printFullAge(years) {
 
-	var ages = [];
-    var fullAges = [];
+// 	var ages = [];
+//     var fullAges = [];
 
-	for (var i = 0; i < years.length; i++) {
-	     ages[i] = 2017 - years[i];
-	};
+// 	for (var i = 0; i < years.length; i++) {
+// 	     ages[i] = 2017 - years[i];
+// 	};
 
-	for (var i = 0; i < ages.length; i++) {
+// 	for (var i = 0; i < ages.length; i++) {
 
-		if (ages[i] >= 18 ) {
-			console.log('Person ' + (i + 1) + ' is ' + ages[i] + ' years old and of full age.');
-			 fullAges.push(true);
-		} else {
-			console.log('Person ' + (i + 1) + ' is ' + ages[i] + ' years old and NOT of full age.');
-			 fullAges.push(false);
-		}
-	}
+// 		if (ages[i] >= 18 ) {
+// 			console.log('Person ' + (i + 1) + ' is ' + ages[i] + ' years old and of full age.');
+// 			 fullAges.push(true);
+// 		} else {
+// 			console.log('Person ' + (i + 1) + ' is ' + ages[i] + ' years old and NOT of full age.');
+// 			 fullAges.push(false);
+// 		}
+// 	}
 
-	console.log(' ');
+// 	console.log(' ');
 
-	return fullAges;
+// 	return fullAges;
 
-}
+// }
 
-var yearsBorn = [1965, 2008, 1992, 1945, 1909];
-var full_1 = printFullAge(yearsBorn);
-var full_2 = printFullAge([2012, 1915, 1999]);
+// var yearsBorn = [1965, 2008, 1992, 1945, 1909];
+// var full_1 = printFullAge(yearsBorn);
+// var full_2 = printFullAge([2012, 1915, 1999]);
+
+
+
+
+
+
+/////////////////////////////////////
+// Lecture: 
+
 
 
 
