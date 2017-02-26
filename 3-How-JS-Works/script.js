@@ -94,30 +94,30 @@
 //     console.log(this);
 // }
 
-var john = {
-    name: 'John',
-    yearOfBirth: 1990,
-    calculateAge: function(year) {
-        console.log(this);
-        console.log(2017 - this.yearOfBirth);
+// var john = {
+//     name: 'John',
+//     yearOfBirth: 1990,
+//     calculateAge: function(year) {
+//         console.log(this);
+//         console.log(2017 - this.yearOfBirth);
 
-        // function innerFunction() {
-        //     console.log(this);
-        // }
-        //  innerFunction();
-    }
-};
+//         // function innerFunction() {
+//         //     console.log(this);
+//         // }
+//         //  innerFunction();
+//     }
+// };
 
-john.calculateAge();
+// john.calculateAge();
 
-var mike = {
-    name: 'Mike',
-    yearOfBirth: 1984
-};
+// var mike = {
+//     name: 'Mike',
+//     yearOfBirth: 1984
+// };
 
 
-mike.calculateAge = john.calculateAge;
-mike.calculateAge();
+// mike.calculateAge = john.calculateAge;
+// mike.calculateAge();
 
 
 
