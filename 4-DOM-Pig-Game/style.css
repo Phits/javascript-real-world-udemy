@@ -103,7 +103,7 @@ body {
     font-size: 30px;
 }
 
-button {
+button, .high-score-input, .submit, label {
     position: absolute;
     width: 200px;
     left: 50%;
@@ -135,6 +135,22 @@ i {
     vertical-align: text-top;
     margin-top: -4px;
     transition: margin 0.3s;
+}
+
+.high-score-input {top: 10px; left: 450px;}
+
+label {
+    top: 10px; 
+    left: 540px;
+    width: 280px;
+}
+
+.submit {
+    top: 10px; 
+    left: 710px;
+    width: 90px;
+    padding: 0 5px;
+    border: solid black 1px;
 }
 
 .btn-new { top: 45px;}
