@@ -137,20 +137,19 @@ i {
     transition: margin 0.3s;
 }
 
-.high-score-input {top: 10px; left: 450px;}
+.high-score-input {top: 10px; left: 440px;}
 
 label {
     top: 10px; 
-    left: 540px;
+    left: 530px;
     width: 280px;
 }
 
 .submit {
     top: 10px; 
-    left: 710px;
+    left: 700px;
     width: 90px;
     padding: 0 5px;
-    border: solid black 1px;
 }
 
 .btn-new { top: 45px;}
