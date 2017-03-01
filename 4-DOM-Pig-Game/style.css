@@ -119,6 +119,15 @@ button, .high-score-input, .submit, label {
     transition: background-color 0.3s, color 0.3s;
 }
 
+.high-score-input:focus, .submit:focus {
+    outline: none;
+}
+
+.submit:hover, .high-score-input:hover {
+    font-weight: 600;
+    color: #EB4D4D;
+}
+
 button:hover { font-weight: 600; }
 button:hover i { margin-right: 20px; }
 
@@ -137,17 +146,17 @@ i {
     transition: margin 0.3s;
 }
 
-.high-score-input {top: 10px; left: 440px;}
+.high-score-input {top: 90%;  left: 440px;}
 
 label {
-    top: 10px; 
+    top: 90%; 
     left: 530px;
     width: 280px;
 }
 
 .submit {
-    top: 10px; 
-    left: 700px;
+    top: 90%; 
+    left: 665px;
     width: 90px;
     padding: 0 5px;
 }
