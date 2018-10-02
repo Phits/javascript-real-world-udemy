@@ -15,27 +15,25 @@ console.log(fullAge);
 */
 
 
+/*************************** 
+ * Variable mutation and type coercion
+*/
 
 
-
-
-// Lecture: variables 2
-
+// Type Coercion 
 // var name = 'John';
 // var age = 28;
 
-// console.log(name + age);
+// console.log(name + ' ' + age);
 // console.log(age + age);
 
 // var job, isMarried;
-
-// console.log(job);
-
 // job = 'teacher';
 // isMarried = false;
 
 // console.log(name + ' is ' + age + ' year old ' + job + '. Is he married? ' + isMarried + '.');
 
+//  Variable mutation
 // age = 'thirty six';
 // job = 'driver';
 
@@ -46,6 +44,7 @@ console.log(fullAge);
 // console.log(lastName);
 
 // alert(name + ' is ' + age + ' year old ' + job + '. Is he married? ' + isMarried + '.');
+
 
 
 
@@ -75,6 +74,62 @@ console.log(fullAge);
 
 // console.log(ageJohn);
 // console.log(ageMark);
+
+
+
+
+/***************
+ * Operator precedence
+ */
+
+//  var now = 2018;
+//  var yearJohn = 1989;
+//  var fullAge = 18;
+
+ // Multiple Operators
+// var isFullAge = now - yearJohn >= fullAge; // true
+// console.log(isFullAge);
+
+// Grouping
+// var ageJohn = now - yearJohn;
+// var ageMark = 35;
+// var average = (ageJohn + ageMark) / 2;
+// console.log(average);
+
+// Multiple Variables
+// var x, y;
+// x = y = (3 + 5) * 4 - 6 ; // 8 * 4 - 6 // 32 - 6  // 26
+// console.log(x, y);
+
+// More operators
+// x *= 2;
+// x += 10;
+// console.log(x);
+// x++;
+// console.log(x);
+
+/*****************************
+* CODING CHALLENGE 1
+*/
+
+/*
+Mark and John are trying to compare their BMI (Body Mass Index), which is calculated using the formula: BMI = mass / height^2 = mass / (height * height). (mass in kg and height in meter).
+1. Store Mark's and John's mass and height in variables
+2. Calculate both their BMIs
+3. Create a boolean variable containing information about whether Mark has a higher BMI than John.
+4. Print a string to the console containing the variable from step 3. (Something like "Is Mark's BMI higher than John's? true"). 
+GOOD LUCK 😀
+*/
+
+// var massMark = 78; // kg
+// var heightMark = 1.69; // meters
+// var massJohn = 92;
+// var heightJohn = 1.95;
+// var BMIMark = massMark / (heightMark * heightMark);
+// var BMIJohn = massJohn / (heightJohn * heightJohn);
+// console.log(BMIMark, BMIJohn);
+// var markHigherBMI = BMIMark > BMIJohn;
+// console.log('Is Mark\'s BMI higher than John\'s? ' + markHigherBMI);
 
 
 ////////////////////////////////////////
@@ -114,9 +169,18 @@ console.log(fullAge);
 
 
 
+/*********************
+ * Ternary Operator
+ */
 
+var firstName = 'John';
+var age = 14;
 
+age >= 18 ? console.log(firstName + ' drinks beer.')
+: console.log(firstName + ' drinks juice.')
 
+var drink = age >= 18 ? 'beer' : 'juice';
+console.log(drink);
 
 ////////////////////////////////////////
 // Lecture: boolean logic and switch
