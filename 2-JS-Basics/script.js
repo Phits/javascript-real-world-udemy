@@ -86,7 +86,7 @@ console.log(fullAge);
 //  var yearJohn = 1989;
 //  var fullAge = 18;
 
- // Multiple Operators
+// Multiple Operators
 // var isFullAge = now - yearJohn >= fullAge; // true
 // console.log(isFullAge);
 
@@ -173,14 +173,68 @@ GOOD LUCK 😀
  * Ternary Operator
  */
 
-var firstName = 'John';
-var age = 14;
+// var firstName = 'John';
+// var age = 14;
 
-age >= 18 ? console.log(firstName + ' drinks beer.')
-: console.log(firstName + ' drinks juice.')
+// age >= 18 ? console.log(firstName + ' drinks beer.')
+// : console.log(firstName + ' drinks juice.')
 
-var drink = age >= 18 ? 'beer' : 'juice';
-console.log(drink);
+// var drink = age >= 18 ? 'beer' : 'juice';
+// console.log(drink);
+
+
+/*****************************
+* Truthy and Falsy values and equality operators
+*/
+// falsy values: undefined, null, 0, '', NaN
+// truthy values: NOT falsy values 
+
+// var height;
+
+// height = 23;
+
+// if (height || height === 0) {
+//     console.log('Variable is defined');
+// } else {
+//     console.log('Variable is NOT defined')
+// }
+
+// // Equality operators
+// if (height == '23') {
+//     console.log('The == operator does type coercion!');
+// }
+
+/*****************************
+* CODING CHALLENGE 2
+*/
+
+/*
+John and Mike both play basketball in different teams. In the latest 3 games, John's team scored 89, 120 and 103 points, while Mike's team scored 116, 94 and 123 points.
+1. Calculate the average score for each team
+2. Decide which teams wins in average (highest average score), and print the winner to the console. Also include the average score in the output.
+3. Then change the scores to show different winners. Don't forget to take into account there might be a draw (the same average score)
+4. EXTRA: Mary also plays basketball, and her team scored 97, 134 and 105 points. Like before, log the average winner to the console. HINT: you will need the && operator to take the decision. If you can't solve this one, just watch the solution, it's no problem :)
+5. Like before, change the scores to generate different winners, keeping in mind there might be draws.
+GOOD LUCK 😀
+*/
+
+// var johnsScoreAvg = (89 + 160 + 103) / 3;
+// var marksScoreAvg = (89 + 140 + 103) / 3;
+// var marysScoreAvg = (97 + 134 + 105) / 3;
+
+// console.log(johnsScoreAvg, marksScoreAvg, marysScoreAvg);
+
+// if (johnsScoreAvg > marksScoreAvg && johnsScoreAvg > marysScoreAvg) {
+//     console.log("John's average is higher ", johnsScoreAvg);
+// } else if (johnsScoreAvg < marksScoreAvg && marysScoreAvg < marksScoreAvg ) {
+//     console.log("Mark's average is higher ", marksScoreAvg);
+// } else if (marysScoreAvg > johnsScoreAvg && marysScoreAvg > marksScoreAvg) {
+//     console.log("Mary's average is higher ", marksScoreAvg);
+// } else {
+//     console.log("There is a draw", marksScoreAvg)
+// }
+
+
 
 ////////////////////////////////////////
 // Lecture: boolean logic and switch
@@ -215,12 +269,6 @@ console.log(drink);
 
 
 
-
-
-
-
-
-
 /////////////////////////////////////
 // Coding Challenge 1
 
@@ -250,70 +298,64 @@ console.log(drink);
 
 
 
-
-
-
-
 /////////////////////////////////////
 // Lecture: Funcitons
 
 // function calculateAge(yearOfBirth) {
-//     var age = 2017 - yearOfBirth;
+//     var age = 2018 - yearOfBirth;
 //     return age;
 // }
 
 // var ageJohn = calculateAge(1990);
 // var ageMike = calculateAge(1969);
 // var ageMary = calculateAge(1948);
-// console.log(ageMike);
+// console.log(ageJohn, ageMike, ageMary);
 
 // function yearUntilRetirement(name, year) {
 //     var age = calculateAge(year);
 //     var retirement = 65 - age;
 
 //     if (retirement >= 0) {
-//          console.log(name + ' retires in ' + retirement + ' years.');
+//         console.log(name + ' retires in ' + retirement + ' years.');
 //     } else {
-//     	 console.log(name + ' has already retired.');
+//         console.log(name + ' has already retired.');
 //     }
-
-   
 // }
 
 // yearUntilRetirement('John', 1990);
-// yearUntilRetirement('Mike', 1990);
+// yearUntilRetirement('Mike', 1970);
 // yearUntilRetirement('Mary', 1948);
-
-
-
-
 
 
 /////////////////////////////////////
 // Lecture: Statements and Expressions
 
+// Function declaration
+// function whatDoYouDo(job, firstName) {}
+
+// Function Expression
+var whatDoYouDO = function(job, firstName) {
+    switch(job) {
+        case 'teacher':
+            return firstName + ' teaches kids how to code'
+        case 'driver':
+            return firstName + ' teaches kids how to drive'
+        case 'designer':
+            return firstName + ' teaches kids how to design'
+        default:
+        return firstName + ' does something else'
+    }
+}
+
+console.log( whatDoYouDO('teacher', 'mark') );
+console.log( whatDoYouDO('designer', 'john') );
+console.log( whatDoYouDO('driver', 'peter') );
+console.log( whatDoYouDO('retired', 'mark') );
+
 // Statements
-// function someFun(par) {
-   
-// }
-
-// if (x = 5) {
-	
-// }
-
-// Expression
-// var someFun = function(par) {
-	
-// }
-
-// 3 + 4;
-
-// var x = 3;
-
-
-
-
-
+if (true) {
+  console.log(23);
+}
 
 
 
