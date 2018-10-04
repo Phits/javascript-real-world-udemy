@@ -334,60 +334,190 @@ GOOD LUCK 😀
 // function whatDoYouDo(job, firstName) {}
 
 // Function Expression
-var whatDoYouDO = function(job, firstName) {
-    switch(job) {
-        case 'teacher':
-            return firstName + ' teaches kids how to code'
-        case 'driver':
-            return firstName + ' teaches kids how to drive'
-        case 'designer':
-            return firstName + ' teaches kids how to design'
-        default:
-        return firstName + ' does something else'
-    }
-}
+// var whatDoYouDO = function(job, firstName) {
+//     switch(job) {
+//         case 'teacher':
+//             return firstName + ' teaches kids how to code'
+//         case 'driver':
+//             return firstName + ' teaches kids how to drive'
+//         case 'designer':
+//             return firstName + ' teaches kids how to design'
+//         default:
+//         return firstName + ' does something else'
+//     }
+// }
 
-console.log( whatDoYouDO('teacher', 'mark') );
-console.log( whatDoYouDO('designer', 'john') );
-console.log( whatDoYouDO('driver', 'peter') );
-console.log( whatDoYouDO('retired', 'mark') );
+// console.log( whatDoYouDO('teacher', 'mark') );
+// console.log( whatDoYouDO('designer', 'john') );
+// console.log( whatDoYouDO('driver', 'peter') );
+// console.log( whatDoYouDO('retired', 'mark') );
 
-// Statements
-if (true) {
-  console.log(23);
-}
+// // Statements
+// if (true) {
+//   console.log(23);
+// }
 
 
 
 /////////////////////////////////////
 // Lecture: Arrays
 
+// Intiatize array data
 // var names = ['John', 'Jane', 'Mark'];
 // var years = new Array(1990, 1969, 1948);
 
+// // Mutate array data
 // console.log(names[1]);
 // names[1] = "Ben";
+// names[names.length] = 'Mary';
 // console.log(names);
 
-// var john = ['John', 'Smith', 1990, 'teacher', false];
+// // Different data types
+// var john = ['John', 'Smith', 1990, 'designer', false];
 
 // john.push('blue');
 // john.unshift('Mr');
+// console.log(john);
+
+// john.pop();
 // john.pop();
 // john.shift('Mr');
 // console.log(john);
 
 // alert(john.indexOf('Smith'));
 
+// var isDesigner = john.indexOf('designer') === -1 ? "John is a Not designer" : "John is a designer";
+
+// console.log(isDesigner, john.indexOf('designer'));
+
 // if (john.indexOf('designer') === -1) {
-// 	console.log('John is not a teacher');
+// 	console.log('John is NOT a designer');
+// } else {
+//     console.log('John is a designer');
 // }
 
 
+/*****************************
+* CODING CHALLENGE 3
+*/
+
+/*
+John and his family went on a holiday and went to 3 different restaurants. The bills were $124, $48 and $268.
+To tip the waiter a fair amount, John created a simple tip calculator (as a function). He likes to tip 20% of the bill when the bill is less than $50, 15% when the bill is between $50 and $200, and 10% if the bill is more than $200.
+In the end, John would like to have 2 arrays:
+1) Containing all three tips (one for each bill)
+2) Containing all three final paid amounts (bill + tip).
+(NOTE: To calculate 20% of a value, simply multiply it with 20/100 = 0.2)
+GOOD LUCK 😀
+*/
+
+// function tipCalculator(bill) {
+//     var percentage;
+
+//     if (bill < 50) {
+//         percentage = .2;
+//     } else if (bill >= 50 && bill <= 200) {
+//         percentage = .15;
+//     } else {
+//         percentage = .1;
+//     }
+//     return percentage * bill;
+// }
+
+// var bills = [124, 48, 268];
+
+// console.log( tipCalculator(10) );
+
+// var tips = [
+//     tipCalculator(bills[0]),
+//     tipCalculator(bills[1]),
+//     tipCalculator(bills[2])
+// ]
+
+// var finalValues = [
+//     bills[0] + tips[0],
+//     bills[0] + tips[1],
+//     bills[0] + tips[2]
+// ]
+
+// console.log( tips );
+// console.log( finalValues );
+
+// var bills = [124, 48, 268];
+// var tips = [];
+// var totals = [];
+
+// function tipCalc(bills) {
+
+//     // console.log(bills.length);
+
+//     for (i = 0; bills.length > i; i++) {
+
+//         if ( bills[i] < 50 ) {
+//             tips[i] =  (bills[i]/100)*20;
+//             totals[i] = bills[i] + tips[i];
+//         } else if ( bills[i] >= 50 && bills[i] <= 200) {
+//             tips[i] =  (bills[i]/100)*15;
+//             totals[i] = bills[i] + tips[i];
+//         } else {
+//             tips[i] =  (bills[i]/100)*10;
+//             totals[i] = bills[i] + tips[i];
+//         }
+//     }
+// }
+
+// tipCalc(bills);
+
+// console.log('Bills are ', bills );
+// console.log('Tips will be', tips );
+// console.log('Totals will be', totals );
 
 
+// Find Dupes & Remove
+
+var data = [
+	{
+		name: 'Kyle',
+		occupation: 'Fashion Designer'
+	},
+	{
+		name: 'Liza',
+		occupation: 'Web Developer'
+	},
+	{
+		name: 'Emily',
+		occupation: 'Web Designer'
+	},
+	{
+		name: 'Melissa',
+		occupation: 'Fashion Designer'
+	},
+	{
+		name: 'Tom',
+		occupation: 'Web Developer'
+	}
+];
+
+var jobs = data.map(function (item) {
+	return item.occupation;
+});
+
+console.log(jobs);
+
+var jobsUnique = jobs.filter(function(item, index){
+	return jobs.indexOf(item) >= index;
+});
+
+console.log(jobsUnique);
 
 
+// var myArray = [ 100, 56, 300, 20, 44, 34, 56, 20];
+// myArray.sort();
+// for (i=0; myArray.length > i; i++) {
+//     if(myArray[i] === myArray[i+1]) {
+//         myArray.splice(i, 1);
+//     }
+// }
 
 
 /////////////////////////////////////
@@ -398,7 +528,8 @@ if (true) {
 //     lastName: 'Smith',
 //     yearOfBirth: '1990',
 //     job: 'teacher',
-//     isMarried: false
+//     isMarried: false,
+//     family: ['Jane', 'Mark', 'Bob', 'Emily']
 // };
 
 // console.log(john.lastName);
