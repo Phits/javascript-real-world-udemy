@@ -475,40 +475,40 @@ GOOD LUCK 😀
 
 // Find Dupes & Remove
 
-var data = [
-	{
-		name: 'Kyle',
-		occupation: 'Fashion Designer'
-	},
-	{
-		name: 'Liza',
-		occupation: 'Web Developer'
-	},
-	{
-		name: 'Emily',
-		occupation: 'Web Designer'
-	},
-	{
-		name: 'Melissa',
-		occupation: 'Fashion Designer'
-	},
-	{
-		name: 'Tom',
-		occupation: 'Web Developer'
-	}
-];
+// var data = [
+// 	{
+// 		name: 'Kyle',
+// 		occupation: 'Fashion Designer'
+// 	},
+// 	{
+// 		name: 'Liza',
+// 		occupation: 'Web Developer'
+// 	},
+// 	{
+// 		name: 'Emily',
+// 		occupation: 'Web Designer'
+// 	},
+// 	{
+// 		name: 'Melissa',
+// 		occupation: 'Fashion Designer'
+// 	},
+// 	{
+// 		name: 'Tom',
+// 		occupation: 'Web Developer'
+// 	}
+// ];
 
-var jobs = data.map(function (item) {
-	return item.occupation;
-});
+// var jobs = data.map(function (item) {
+// 	return item.occupation;
+// });
 
-console.log(jobs);
+// console.log(jobs);
 
-var jobsUnique = jobs.filter(function(item, index){
-	return jobs.indexOf(item) >= index;
-});
+// var jobsUnique = jobs.filter(function(item, index){
+// 	return jobs.indexOf(item) >= index;
+// });
 
-console.log(jobsUnique);
+// console.log(jobsUnique);
 
 
 // var myArray = [ 100, 56, 300, 20, 44, 34, 56, 20];
@@ -554,13 +554,6 @@ console.log(jobsUnique);
 // console.log(jane);
 
 
-
-
-
-
-
-
-
 /////////////////////////////////////
 // Lecture: Objects and Methods
 
@@ -573,14 +566,14 @@ console.log(jobsUnique);
 //     isMarried: false,
 //     family: ['Jane', 'Mark', 'Bob'],
 //     calculateAge: function() {
-//     	return 2017 - this.yearOfBirth;
+//     	this.age = 2017 - this.yearOfBirth;
 //     }
 // };
 
 // console.log( john.calculateAge() );
 
-// var age = john.calculateAge();
-// john.age = age;
+// john.calculateAge();
+// console.log( john );
 
 // console.log(john);
 
@@ -614,15 +607,51 @@ console.log(jobsUnique);
 
 
 
+/*****************************
+* CODING CHALLENGE 4
+*/
 
+/*
+Let's remember the first coding challenge where Mark and John compared their BMIs. Let's now implement the same functionality with objects and methods.
+1. For each of them, create an object with properties for their full name, mass, and height
+2. Then, add a method to each object to calculate the BMI. Save the BMI to the object and also return it from the method.
+3. In the end, log to the console who has the highest BMI, together with the full name and the respective BMI. Don't forget they might have the same BMI.
+Remember: BMI = mass / height^2 = mass / (height * height). (mass in kg and height in meter).
+GOOD LUCK 😀
+*/
 
+// var mark = {
+//     name: 'Mark Urabn',
+//     mass: 78,
+//     height: 1.69,
+//     calcBmi: function() {
+//         this.bmi = this.mass / (this.height * this.height);
+//         return this.bmi;
+//     }
+// }
 
+// var john = {
+//     name: 'John Strauss',
+//     mass: 92,
+//     height: 1.95,
+//     calcBmi: function() {
+//         this.bmi = this.mass / (this.height * this.height);
+//         return this.bmi;
+//     }
+// }
+
+// if (mark.calcBmi() > john.calcBmi()) {
+//     console.log(mark.name + '\'s bmi of ' + mark.bmi + ' is higher than ' + john.name + '\'s bmi\'s of ' + john.bmi);
+// } else if (john.bmi > mark.bmi) {
+//     console.log(john.name + '\'s bmi of ' + john.bmi + ' is higher than ' + mark.name + '\'s bmi\'s of ' + mark.bmi);
+// } else {
+//     console.log(john.name + '\'s bmi of ' + john.bmi + ' is the same as ' + mark.name + '\'s bmi\'s of ' + mark.bmi);
+// }
 
 
 
 /////////////////////////////////////
 // Coding Challenge 2
-
 // var yearsBorn = [1965, 2008, 1992, 1945, 1909];
 // var ages = [];
 
@@ -673,24 +702,168 @@ console.log(jobsUnique);
 // var full_2 = printFullAge([2012, 1915, 1999]);
 
 
+// String Methods
+// .length, split(0,1), indexOf("locate"), lastIndexOf(), search();
+// var str = "Please locate where 'locate' occurs!";
+// console.log(str);
+// var pos = str.indexOf("locate");
+// console.log(pos);
+// document.getElementById("demo").innerHTML = pos;
+
+// 2 Dimensional Array
+// var myarray = new Array(3);
+// for (i = 0; i < 3; i++)
+//     myarray[i] = new Array(3)
+
+//     console.log(myarray);
+
+/******************************
+ * Loops and Interation
+ */
+
+//  for (i=0; i < 10; i++) {
+//     console.log(i);
+//  };
+
+//  var john = ['John', 'Smith', 1990, 'designer', false];
+
+// For Loop
+//  for (var i = 0; i < john.length; i++) {
+//     console.log( john[i]) ;
+//  }
+
+// While Loop
+// var i = 0;
+//  while (i < john.length) {
+//     console.log( john[i]) ;
+//     i++
+// }
+
+// Continue with break statements
+// var john = ['John', 'Smith', 1990, 'designer', false];
+
+//  for (var i = 0; i < john.length; i++) {
+//     if (typeof john[i] !== 'string') continue;
+//     console.log( john[i]) ;
+//  }
+
+//  for (var i = 0; i < john.length; i++) {
+//     if (typeof john[i] !== 'string') break;
+//     console.log( john[i]) ;
+//  }
+
+// Looping backwards
+//  for (var i = john.length - 1; i >= 0; i--) {
+//     console.log( john[i]) ;
+//  }
+
+/*****************************
+* CODING CHALLENGE 5
+*/
+
+/*
+Remember the tip calculator challenge? Let's create a more advanced version using everything we learned!
+This time, John and his family went to 5 different restaurants. The bills were $124, $48, $268, $180 and $42.
+John likes to tip 20% of the bill when the bill is less than $50, 15% when the bill is between $50 and $200, and 10% if the bill is more than $200.
+Implement a tip calculator using objects and loops:
+1. Create an object with an array for the bill values
+2. Add a method to calculate the tip
+3. This method should include a loop to iterate over all the paid bills and do the tip calculations
+4. As an output, create 1) a new array containing all tips, and 2) an array containing final paid amounts (bill + tip). HINT: Start with two empty arrays [] as properties and then fill them up in the loop.
+
+EXTRA AFTER FINISHING: Mark's family also went on a holiday, going to 4 different restaurants. The bills were $77, $375, $110, and $45.
+Mark likes to tip 20% of the bill when the bill is less than $100, 10% when the bill is between $100 and $300, and 25% if the bill is more than $300 (different than John).
+5. Implement the same functionality as before, this time using Mark's tipping rules
+6. Create a function (not a method) to calculate the average of a given array of tips. HINT: Loop over the array, and in each iteration store the current sum in a variable (starting from 0). After you have the sum of the array, divide it by the number of elements in it (that's how you calculate the average)
+7. Calculate the average tip for each family
+8. Log to the console which family paid the highest tips on average
+GOOD LUCK 😀
+*/
+
+
+
+var tipObjectMethod = {
+    name: 'John Fitz',
+    bills: [124, 48, 268, 180, 42],
+    calcTips: function () {
+        this.tips = [];
+        this.finalBills = [];
+
+        for (var i = 0; i < this.bills.length; i++) {
+            var percentage;
+            var bill = this.bills[i];
+
+            if (bill < 50) {
+                percentage = .2;
+            } else if (bill >= 50 && bill <= 200) {
+                percentage = .15;
+            } else {
+                percentage = .1;
+            }
+
+            this.tips[i] = bill * percentage;
+
+            this.finalBills[i] = bill + bill * percentage;
+
+            // console.log('John\'s tips are '  + this.tips[i]);
+            // console.log('John\'s final bills '  + this.finalBills[i]);
+        }
+        return this.finalBills;
+    }
+}
+
+// console.log('tipObjectMethod.calcTips()  is ', tipObjectMethod.calcTips());
+tipObjectMethod.calcTips();
+console.log('John\'s tipObjectMethod '  + JSON.stringify(tipObjectMethod)  );
+// console.log('John\'s final bills '  + finalBills);
+
+var marksBills = [77, 375, 110, 45];
+var marksFinalBills = [];
+
+function tipFunction() {
+    var tips = [];
+    for (var i = 0; i < marksBills.length; i++) {
+
+        if (marksBills[i] < 100) {
+            tips[i] = marksBills[i] * .2;
+        } else if (marksBills[i] >= 100 && marksBills[i] <= 300) {
+            tips[i] = marksBills[i] * .15;
+        } else {
+            tips[i] = marksBills[i] * .1;
+        }
+
+        marksFinalBills[i] = tips[i] + marksBills[i];
+
+        console.log('Mark\'s tips are '  + tips[i]);
+        console.log('Mark\'s final bills '  + marksFinalBills[i]);
+    }
+
+}
+
+tipFunction();
 
 
 
 
-/////////////////////////////////////
-// Lecture: 
 
 
 
 
+// console.log("A"-"B"+"50") 
 
+/************* 
+ * Canvas
+ */
 
+//  var canvas = document.getElementById("myCanvas");
+//  var ctx = canvas.getContext("2d");
+//  ctx.fillRect(10,10,1,1); // fill in the pixel at (10,10)
 
+// Distance between 2 points
+// var a = x1 - x2;
+// var b = y1 - y2;
 
-
-
-
-
+// var c = Math.sqrt( a*a + b*b );
 
 
 
