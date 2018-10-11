@@ -813,9 +813,9 @@ var tipObjectMethod = {
 }
 
 // console.log('tipObjectMethod.calcTips()  is ', tipObjectMethod.calcTips());
-tipObjectMethod.calcTips();
-console.log('John\'s tipObjectMethod '  + JSON.stringify(tipObjectMethod)  );
-// console.log('John\'s final bills '  + finalBills);
+// tipObjectMethod.calcTips();
+// console.log('John\'s tipObjectMethod '  + JSON.stringify(tipObjectMethod)  );
+console.log('John\'s final bills ' + tipObjectMethod.calcTips());
 
 var marksBills = [77, 375, 110, 45];
 var marksFinalBills = [];
@@ -834,22 +834,92 @@ function tipFunction() {
 
         marksFinalBills[i] = tips[i] + marksBills[i];
 
-        console.log('Mark\'s tips are '  + tips[i]);
-        console.log('Mark\'s final bills '  + marksFinalBills[i]);
+        // console.log('Mark\'s tips are '  + tips[i]);
+        // console.log('Mark\'s final bills '  + marksFinalBills[i]);
     }
-
+    return marksFinalBills;
 }
 
 tipFunction();
+console.log('Marks final bills are ' + tipFunction());
 
 
 
 
+// SetTimeout(function(){
+//     console.log(“two”);
+// }, 0);
 
 
+
+// console.log('one');
+// setTimeout(function(){ console.log("two"); }, 0);
+// console.log('three');
 
 
 // console.log("A"-"B"+"50") 
+
+
+/********************************** 
+ * For a given number ("n"), write a function that loops from 1 to "n" and outputs "Fizz" if the number is divisible by 3, "Buzz" if it is divisible by 5, "FizzBuzz" if it is divisible by both 3 & 5, and the number itself otherwise
+*/
+// function myFunction(n) {
+
+//     for(i=1; i <= n; i++ ) {
+//         // console.log('i', i);
+//         var divThree = (i % 3);
+//         var divFive = (i % 5);
+
+//         if (divThree === 0 && divFive === 0) {
+//             console.log('FizzBuzz', i);
+//         } else if (divThree === 0) {
+//             console.log('Fizz', i);
+//         } else if (divFive === 0) {
+//             console.log('Buzz', i);
+//         } 
+//     }
+// }
+// myFunction(30);
+
+/*****************************
+What is the output? How to fix it?
+*/
+// console.log('start');
+// for(var i=0; i<5; i++){
+    
+//     setTimeout[function(){
+//         console.log(i);
+//     },0);
+// }
+// console.log('end');
+
+/**********************************
+For a given array ([8, 7, 5, 3, 3, 0, 9, 1]), do the following: (must use ES6 Array methods)
+i) Sort in ascending order
+ii) Remove duplicates
+iii) Find numbers greater than a particular number (for ex: greater than 3)  
+*/
+
+// var myArray = [8, 7, 5, 3, 3, 0, 9, 1];
+
+// function removeDups(arr) {
+//     arr.sort();
+
+//     for(i = 0; i < arr.length; i++) {
+//         if (arr[i] === arr[i + 1]) {
+//             console.log('i is ', i);
+//            arr.splice(i, 1);
+//         }
+//     }
+//     console.log('myArray is ', myArray);
+// }
+// removeDups(myArray);
+
+
+// const names = ['John', 'Paul', 'George', 'Ringo', 'John'];
+
+// let unique = [...new Set(names)];
+// console.log(unique); // 'John', 'Paul', 'George', 'Ringo'
 
 /************* 
  * Canvas
